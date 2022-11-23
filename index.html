@@ -15,10 +15,13 @@
 
 <body>
 	<div id="app">
-		<div>
-            {{arrMails}}
-        </div>
-		<button @click="getNumbers">Stampa 10 mail</button>
+		<ul v-if="arrMails.length === 10">
+			<li v-for="mail in arrMails">
+				{{mail}}
+			</li>
+		</ul>
+		
+		<button @click="getMails">Stampa 10 mail</button>
 	</div>
 </body>
 </html>
